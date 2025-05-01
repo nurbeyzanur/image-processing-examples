@@ -1,0 +1,16 @@
+# IDE klasörleri
+.idea/
+.vscode/
+
+# Python dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+*.log
