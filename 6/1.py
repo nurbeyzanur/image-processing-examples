@@ -40,6 +40,11 @@ cv2.imshow('l2 binary', l2)
 cv2.imshow('l3 floodFill', l3)
 cv2.imshow('l4 bitwise_not', l4)
 cv2.imshow('sonuc', sonuc)
+cv2.imshow("sonuc2", sonuc2)
+l[sonuc2] = 128
+cv2.imshow("new image", l)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 # Wait for a key press
 cv2.waitKey(0)
