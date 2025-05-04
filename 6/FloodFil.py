@@ -31,8 +31,11 @@ sonuc2 = np.bool_(sonuc)
 print(sonuc2.shape)
 print(sonuc2.dtype)
 print(np.max(sonuc2))
+# true
 print(np.min(sonuc2))
+# false
 l[sonuc2] = 128
+# true=128
 
 # Display the images
 cv2.imshow('orj', l)
@@ -41,10 +44,7 @@ cv2.imshow('l3 floodFill', l3)
 cv2.imshow('l4 bitwise_not', l4)
 cv2.imshow('sonuc', sonuc)
 
-# Wait for a key press
 cv2.waitKey(0)
-
-# Close all windows
 cv2.destroyAllWindows()
 
 # Apply morphological close operation
