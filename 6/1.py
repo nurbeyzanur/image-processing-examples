@@ -32,7 +32,7 @@ print(sonuc2.shape)
 print(sonuc2.dtype)
 print(np.max(sonuc2))
 print(np.min(sonuc2))
-l[sonuc2] = 128
+
 
 # Display the images
 cv2.imshow('orj', l)
@@ -46,12 +46,6 @@ cv2.imshow("new image", l)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# Wait for a key press
-cv2.waitKey(0)
-
-# Close all windows
-cv2.destroyAllWindows()
-
 # Apply morphological close operation
 l5 = cv2.morphologyEx(l4, cv2.MORPH_CLOSE,
                       cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (15, 15)))
@@ -62,7 +56,7 @@ l5 = cv2.morphologyEx(l5, cv2.MORPH_OPEN,
                           cv2.MORPH_ELLIPSE,
                           (5, 5)))
 
-# Find the coordinates of non-zero pixels
+# The coordinates of non-zero pixels are found, and the coordinates are combined into xy
 xy = np.column_stack(np.where(l5 > 0))
 
 # Print the shape, data type, maximum and minimum values of the coordinates
@@ -73,8 +67,6 @@ print(np.min(xy))
 
 # Crop the image based on the coordinates of the non-zero pixels
 I6 = l[min(xy[:, 0]):max(xy[:, 0]) + 1, min(xy[:, 1]):max(xy[:, 1]) + 1]
-
-# Display the cropped image
 cv2.imshow('I6', I6)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
