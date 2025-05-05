@@ -18,12 +18,7 @@ print('centroids:', centroids)  # Centroids (center of mass) of each component
 # Show original grayscale image
 cv2.imshow('Orj', I)
 
-# Show component labeled as 1
-cv2.imshow('1. goruntu', np.uint8(labels == 1) * 255)  # Only component 1 in white, others black
-
-# Show component labeled as 2
-cv2.imshow('2. goruntu', np.uint8(labels == 2) * 255)  # Only component 2 in white, others black
-
-# Wait for a key press and close all windows
+cv2.imshow('1. image', np.uint8(labels == 1) * 255)
+cv2.imshow('2. image', np.uint8(labels == 2) * 255)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
